@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Regras do Clã Murasaki no Kage</title>
+  <style>
+    body {
+      background: linear-gradient(180deg, #1b001f, #000000);
+      background-image: url('https://www.transparenttextures.com/patterns/snake-skin.png');
+      background-repeat: repeat;
+      background-size: cover;
+    }
+    .regra {
+      background: radial-gradient(circle at top left, #4a0066aa, #000000cc);
+      border: 1px solid #b74dff;
+      box-shadow: 0 0 25px #9900ff99, inset 0 0 15px #4d0077aa;
+    }
+    .regra span {
+      font-family: 'Georgia', serif;
+      text-shadow: 0 0 3px #ffccff;
+    }
+    h1 {
+      font-family: 'Georgia', serif;
+      text-shadow: 0 0 12px #cc00ff, 0 0 24px #660066;
+    }
+    #proximaBtn {
+      background-color: #5d0099;
+      box-shadow: 0 0 15px #a64dff;
+      text-shadow: 0 0 5px #ffffff44;
+    }
+    #proximaBtn:hover {
+      background-color: #7a00cc;
+    }
+
+    body {
+      background: linear-gradient(180deg, #2a003f, #000000);
+      color: #d3a4ff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 40px;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    h1 {
+      color: #b97cff;
+      font-size: 2.8rem;
+      margin-bottom: 40px;
+      text-shadow: 0 0 10px #8000ff;
+    }
+    #regra-container {
+      min-height: 160px; /* espaço para a maior regra */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .regra {
+      background-color: rgba(72, 0, 100, 0.2);
+      border: 1px solid #a64dff;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px #6a00cc66;
+      display: none;
+    }
+    .regra span {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    #proximaBtn {
+      position: fixed;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      background-color: #8000ff;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #b97cff;
+      z-index: 100;
+    }
+    #proximaBtn:hover {
+      background-color: #a64dff;
+    }
+    footer {
+      margin-top: 100px;
+      font-size: 1rem;
+      color: #8a4fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>🟣📜 Regras do Clã Murasaki no Kage</h1>
+
+  <div id="regra-container">
+    <div class="regra">
+      <span>1. 🤫 O Silêncio é Lei.</span><br />
+      A verdadeira força se manifesta na quietude. Fala apenas o necessário. O resto, que seja entendido pelo olhar.
+    </div>
+    <div class="regra">
+      <span>2. 🐍 Respeite o Veneno, Honre a Serpente.</span><br />
+      Todo perigo tem seu lugar. Todo inimigo tem sua razão. Não ataque por impulso, mas aja com sabedoria.
+    </div>
+    <div class="regra">
+      <span>3. 🌕 A Noite é Sagrada.</span><br />
+      Nas horas de escuridão, é quando mais se escuta o espírito. Não cause desordem sob a lua.
+    </div>
+    <div class="regra">
+      <span>4. 🔮 O Círculo Roxo é Sagrado.</span><br />
+      Nunca profane os locais marcados com as pedras do clã. São santuários de equilíbrio e comunhão.
+    </div>
+    <div class="regra">
+      <span>5. 🧣 Use o Manto com Dignidade.</span><br />
+      Quem veste o símbolo da Sombra Roxa representa mais que a si mesmo — representa a lenda viva do clã.
+    </div>
+    <div class="regra">
+      <span>6. 👁️‍🗨️ Observa antes de agir.</span><br />
+      O impulso é o erro dos fracos. A vigilância é a arma dos sábios.
+    </div>
+    <div class="regra">
+      <span>7. 🫂 Irmãos de Sombra, Sangue no Espírito.</span><br />
+      Proteja cada membro como se fosse sua própria carne. Trair um irmão é ser esquecido na névoa.
+    </div>
+    <div class="regra">
+      <span>8. 🌌 Guarde os Segredos.</span><br />
+      O clã vive no mistério. Nunca revele táticas, símbolos ou rituais aos de fora. O silêncio protege.
+    </div>
+    <div class="regra">
+      <span>9. 🪶 Seja Calma, mas Mortal.</span><br />
+      Como a serpente, o membro do clã deve parecer sereno — mas nunca indefeso.
+    </div>
+    <div class="regra">
+      <span>10. 🟣 “Que nenhum inimigo permaneça de pé.”</span><br />
+      Esse é o juramento final. Que sua existência seja paz para os seus… e sono eterno para os que ousarem desafiar.
+    </div>
+  </div>
+
+  <button id="proximaBtn" onclick="mostrarProxima()">Próxima regra</button>
+
+  <footer>
+    © Clã Murasaki no Kage – Fundado sob a Lua Lilás 🌕💜
+  </footer>
+
+  <script>
+    const regras = document.querySelectorAll('.regra');
+    const botao = document.getElementById('proximaBtn');
+    let indiceAtual = 0;
+
+    // Mostra a primeira regra logo no carregamento
+    regras[0].style.display = 'block';
+
+    function mostrarProxima() {
+      regras[indiceAtual].style.display = 'none'; // esconde atual
+      indiceAtual++;
+      if (indiceAtual < regras.length) {
+        regras[indiceAtual].style.display = 'block'; // mostra próxima
+      } else {
+        botao.style.display = 'none'; // esconde botão se acabou
+      }
+    }
+  </script>
+</body>
+</html>
